@@ -1,5 +1,4 @@
-﻿using DFE.Core.Data;
-using DFE.Core.Io;
+﻿using DFE.Core.Io;
 using DFE.Core.Node;
 using DFE.Core.Utility;
 using DFE.Core.VisualObject;

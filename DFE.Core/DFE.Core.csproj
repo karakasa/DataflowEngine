@@ -6,10 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Executor\" />
     <Folder Include="CodeGenerator\" />
     <Folder Include="Conversion\" />
-    <Folder Include="Utility\" />
   </ItemGroup>
 
   <ItemGroup>

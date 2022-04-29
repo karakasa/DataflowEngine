@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DFE.Core.Data
+namespace DFE.Core.Io
 {
     public interface IExtendedStorageContainer
     {
-        public ExtendedStorage ExtendedInformation { get; } 
+        public ExtendedStorage ExtendedInformation { get; }
     }
 }

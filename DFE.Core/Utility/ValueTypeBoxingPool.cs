@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace DFE.Core.Data
+namespace DFE.Core.Utility
 {
     internal static class ValueTypeBoxingPool
     {
@@ -15,6 +15,10 @@ namespace DFE.Core.Data
             for (var i = MIN_CACHED_INT; i <= MAX_CACHED_INT; i++)
                 BoxedIntegers[i - MIN_CACHED_INT] = i;
         }
+        public static object Box(int value)
+            => BoxInt(value);
+        public static object Box(bool value)
+            => BoxBool(value);
         public static object Box<T>(T value)
         {
             if (typeof(T) == typeof(int))
