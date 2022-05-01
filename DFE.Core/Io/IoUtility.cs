@@ -36,13 +36,17 @@ namespace DFE.Core.Io
             if (CustomSerializerDispatcher.Exists(type))
                 return true;
 
+            if (BlittableTypeSerializer.EnableUnknownTypeSerialization &&
+                BlittableTypeUtility.IsBlittable(type))
+                return true;
+
             return false;
         }
         public static T Clone<T>(this T source)
             where T : IDfeSerializable
         {
-            if (source is IDfeClonable<T> clonable)
-                return clonable.Clone();
+            if (source is IDfeClonable clonable)
+                return (T)clonable.Clone();
 
             return default;
         }

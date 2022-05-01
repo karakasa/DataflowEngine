@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DFE.Core.Io
+namespace DFE.Core.Utility
 {
-    public interface IDfeClonable
+    public class DfeContracts
     {
-        public object Clone();
     }
 }
